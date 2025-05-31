@@ -1,31 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    /* Grayish dark theme colors */
-    --background: 220 15% 10%;
-    --foreground: 0 0% 90%;
-    --card: 220 15% 13%;
-    --card-foreground: 0 0% 90%;
-    --popover: 220 15% 13%;
-    --popover-foreground: 0 0% 90%;
-    --primary: 0 0% 90%;
-    --primary-foreground: 220 15% 10%;
-    --secondary: 220 15% 18%;
-    --secondary-foreground: 0 0% 90%;
-    --muted: 220 15% 18%;
-    --muted-foreground: 220 10% 65%;
-    --accent: 220 15% 18%;
-    --accent-foreground: 0 0% 90%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 220 15% 20%;
-    --input: 220 15% 20%;
-    --ring: 220 15% 30%;
-    --radius: 0.5rem;
-  }
+@theme {
+  /* Custom colors for dark theme */
+  --color-border: hsl(220 15% 20%);
+  --color-input: hsl(220 15% 20%);
+  --color-ring: hsl(220 15% 30%);
+  --color-background: hsl(220 15% 10%);
+  --color-foreground: hsl(0 0% 90%);
+  --color-primary: hsl(0 0% 90%);
+  --color-primary-foreground: hsl(220 15% 10%);
+  --color-secondary: hsl(220 15% 18%);
+  --color-secondary-foreground: hsl(0 0% 90%);
+  --color-destructive: hsl(0 62.8% 30.6%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+  --color-muted: hsl(220 15% 18%);
+  --color-muted-foreground: hsl(220 10% 65%);
+  --color-accent: hsl(220 15% 18%);
+  --color-accent-foreground: hsl(0 0% 90%);
+  --color-popover: hsl(220 15% 13%);
+  --color-popover-foreground: hsl(0 0% 90%);
+  --color-card: hsl(220 15% 13%);
+  --color-card-foreground: hsl(0 0% 90%);
+  
+  --radius-sm: 0.125rem;
+  --radius: 0.5rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.75rem;
 }
 
 @layer base {
@@ -45,8 +45,6 @@
   }
 }
 
-@layer utilities {
-  .transition-soft {
-    @apply transition-all duration-300 ease-in-out;
-  }
+.transition-soft {
+  @apply transition-all duration-300 ease-in-out;
 } 
